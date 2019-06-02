@@ -4,7 +4,7 @@ int steps = 0;
 int width = 0;
 int height = 0;
 
-int glitchLevel = 1; //[0, 1, 2, 3, ... 10] intensity of the glitch sorting pass
+int glitchLevel = 10; //[0, 1, 2, 3, ... 10] intensity of the glitch sorting pass
 float glitch;
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
 //select how to sort the pixels by hue or brightness
@@ -112,7 +112,7 @@ void draw() {
       for (int i = (sorted.pixels.length - 2)/2; i >= 0; i--) {
         heapify(sorted.pixels, i, sorted.pixels.length - 1);
       }
-      steps = sorted.pixels.length - 1;
+      steps = 0;
       
     } else if (steps != 0 && steps > (sorted.pixels.length - 1)*glitch) {
       exchangePixel(sorted.pixels, 0, steps);
@@ -122,16 +122,13 @@ void draw() {
     if (steps > 0) {
       steps--;
     } else {
-      noLoop();
-      save(filename+"_PixelsSortedBy_"+sortPixelMethod+"_L"+glitchLevel+".jpg");
-      println("pixels sorting complete");
       break;
     }
   }
 
   sorted.updatePixels();
   //show original and sorted imgs
-  background(0);
+  background(0);  
   if (showBothIMGs && 2 * img.width < displayWidth) {
     //2 img side by side
     image(img, 0, 0);
@@ -144,6 +141,12 @@ void draw() {
       image(img, 0, 0.8* img.height, 0.2* img.width, 0.2* img.height);
       noTint();
     }
+  }
+  //SAVE IMG when finish
+  if (steps == 0) {
+    noLoop();
+    save(filename+"_PixelsSortedBy_"+sortPixelMethod+"_L"+glitchLevel+".jpg");
+    println("pixels sorting complete");
   }
   //Show framerate on display
   if (steps > multiStep+1) {
