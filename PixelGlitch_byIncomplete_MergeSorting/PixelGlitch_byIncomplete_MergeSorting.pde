@@ -8,7 +8,7 @@ int width = 0;
 int height = 0;
 
 
-int glitchLevel = 6; //1, 2, 3, ... control division merge
+int glitchLevel = 7; //1, 2, 3, ... control number of merge division
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
 //select how to sort the pixels by hue or brightness
 String sortPixelMethod = "hue";
@@ -119,8 +119,12 @@ void draw() {
 
   //multiStep during each loop for faster sort
   for (int steps = 0; steps < multiStep; steps++) {
-    //slow down for better visualization
-    if (division > 2 && multiStep > 500) multiStep = multiStep/2;
+    
+    //slow down multiStep for better visualization
+    if (division > 2 && multiStep > 1000) multiStep /= 2;
+    else if (division > 2 && multiStep < 1000) multiStep = 1000;
+    else if (division > 32 && multiStep <= 1000) multiStep = 500;
+    else if (division > 64 && multiStep <= 500) multiStep = 100;
 
     //control the Iterative mergesort calls using the stackcalls queue
     if (stackcalls.isEmpty()) {

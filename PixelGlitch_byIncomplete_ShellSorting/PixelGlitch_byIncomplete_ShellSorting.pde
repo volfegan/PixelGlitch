@@ -9,16 +9,16 @@ int width = 0;
 int height = 0;
 
 
-int glitchLevel = 4; //[0, 1, 2, 3, ... ] intensity of the glitch sorting pass
+int glitchLevel = 10; //[0, 1, 2, 3, ... ] intensity of the glitch sorting pass
 int glitch; // the maximum gap size allowed to sort created by the glitch level
-boolean showBothIMGs = true; //to show both imgs side by side, only sorted img
+boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
 //select how to sort the pixels by hue or brightness
 String sortPixelMethod = "hue";
 //String sortPixelMethod = "brightness";
 
 
 //used to control speed of sorting process
-int multiStep = 500;
+int multiStep = 1000;
 
 //Create a queue stack to hold the exchanged pixel indexes & colours from the while loop dummy calls
 Queue<int[]> stackcalls = new LinkedList();
@@ -52,7 +52,6 @@ void settings() {
   //img = loadImage("sunflower400.jpg");
   //img = loadImage("d.jpg");
   width = img.width;
-  //width = img.width * 2; If want to show both original and sorted pics
   height = img.height;
 
   //the canvas window size will be according to the img size
@@ -179,7 +178,7 @@ void draw() {
       noTint();
     }
   }
-  //Show framerate on display
+  //Show framerate on display || SAVE
   if (!stackcalls.isEmpty()) {
     text("Shell sort: " + String.format("%.2f", frameRate) + 
       " frameRate / GlitchLevel: " + glitchLevel + " / gap: " + gap + 
