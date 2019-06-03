@@ -8,7 +8,7 @@ int width = 0;
 int height = 0;
 
 
-
+//options
 int glitchLevel = 7; //1, 2, 3, ... control number of merge division
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
 //select how to sort the pixels by hue or brightness (select on and comment the other)
