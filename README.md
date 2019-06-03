@@ -48,7 +48,7 @@ Sorted by Brightness:
 ![Incomplete Merge Sorting of an sunflower by brightness](Incomplete_MergeSorting_brightness.jpg)
 
 #### Glitch by Incomplete Shell Sorting
-Based on [Pixel Shell Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelShellSorting). No difference from a normal Shell sorting. The glitchLevel range is [0, to...] and is used to control the size of the max gap interval of the pixel sorting (using the variable glitch) and stopping when the gap reaches the limit given. How this Pixek Shell sorting cuts and reassemble the image depends on the image width x height and the colour hue|brightness. As a general rule, when the width is wider than the height we see the image is also being cut vertically and horizontally. For this square dimension flower, we can only see the cuts being done horizontally. 
+Based on [Pixel Shell Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelShellSorting). No difference from a normal Shell sorting. The glitchLevel range is [0, to...] and is used to control the size of the max gap interval of the pixel sorting (using the variable glitch) and stopping when the gap reaches the limit given. How this Pixel Shell sorting cuts and reassemble the image depends on the image width x height and the colour hue|brightness. As a general rule, when the width is wider than the height we see the image is also being cut vertically and horizontally. For this square dimension flower, we can only see the cuts being done horizontally. 
 
 Sorted by Hue:
 
@@ -63,7 +63,7 @@ Sorted by Brightness:
 |                      :---:                       |
 
 #### Glitch by kimasendorf/ASDFPixelSort
-Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). This program is a bit famous, so I wanted to see how does the visualization  of the glitch occur. The original program has 3 modes of pixel sorting and only does in one way (vertical (V) + horizontal (H)). I modified it so we can change de direction of the sorting. Since this was not made by me, the variable names are diferent (describled below):
+Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). This program is a bit famous, so I wanted to see how does the visualization of the glitch occur. The original program has 3 modes of pixel sorting and only does in one way (vertical (V) + horizontal (H)). I modified it so we can change the direction of the sorting. Since this was not made by me, the variable names are different (described below):
 
 * boolean mode = 0|1|2 -> mode is the Pixel sorter method to be used. [0]: will select pixels by getFirstNotBlackX() and then the getNextBlackY(); [1]: sort by brightness. It getFirstBrightX() and then getNextDarkY(); [2]: sort by getFirstNotWhiteX() and then getNextWhiteY().
 Threshold values to determine how the pixel sorting starts and ends:
@@ -80,7 +80,7 @@ Sorted by mode 1, respectively glitch: H, H+V, V, V+H
 
 ![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode1.jpg)
 
-Sorted by mode 2, respectively glitch: H, H+V, V, V+H
+Sorted by mode 2, respectively glitch: H, H+V, V, V+H. This glitch was very discreet in this image and only affected the dark areas below the flower.
 
 ![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode2.jpg)
 
