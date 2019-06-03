@@ -15,9 +15,10 @@ String sortPixelMethod = "hue";
 
 //used to control speed of sorting process
 int multiStep = 2000;
+
+
+
 boolean started = false; //to mark if it started sorting
-
-
 String filename;
 //there is no file validation, so any non-img selected will crash the program
 void fileSelected(File selection) {
