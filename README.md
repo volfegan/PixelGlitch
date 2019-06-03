@@ -36,8 +36,8 @@ Sorted by Brightness:
 
 ![Incomplete HeapSorting of an sunflower by brightness](Incomplete_HeapSorting_brightness.jpg)
 
-#### Glitch by Imperfect Merge Sorting
-Based on [Pixel Merge Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelMergeSorting). No difference from a normal Merge sorting. The glitchLevel range is [1, to..., 10] and is used to control how many division|merges are done during the sorting before stopping.
+#### Glitch by Incomplete Merge Sorting
+Based on [Pixel Merge Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelMergeSorting). No difference from a normal Merge sorting. The glitchLevel range is [1, to...] and is used to control how many division|merges are done during the sorting before stopping.
 
 Sorted by Hue:
 
@@ -47,7 +47,7 @@ Sorted by Brightness:
 
 ![Incomplete Merge Sorting of an sunflower by brightness](Incomplete_MergeSorting_brightness.jpg)
 
-#### Glitch by Imperfect Shell Sorting
+#### Glitch by Incomplete Shell Sorting
 Based on [Pixel Shell Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelShellSorting). No difference from a normal Shell sorting. The glitchLevel range is [0, to...] and is used to control the size of the max gap interval of the pixel sorting (using the variable glitch) and stopping when the gap reaches the limit given. How this Pixek Shell sorting cuts and reassemble the image depends on the image width x height and the colour hue|brightness. As a general rule, when the width is wider than the height we see the image is also being cut vertically and horizontally. For this square dimension flower, we can only see the cuts being done horizontally. 
 
 Sorted by Hue:
@@ -56,18 +56,37 @@ Sorted by Hue:
 
 Sorted by Brightness:
 
-![Incomplete Shell Sorting of an sunflower by Incomplete_HeapSorting_brightness](Incomplete_ShellSorting_brightness.jpg)
+![Incomplete Shell Sorting of an sunflower by brightness](Incomplete_ShellSorting_brightness.jpg)
 
 
-| *3rd party imported glitch library* |
-|               :---:                 |
+| *3rd party imported and modified glitch library* |
+|                      :---:                       |
 
 #### Glitch by kimasendorf/ASDFPixelSort
-Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). 
+Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). This program is a bit famous, so I wanted to see how does the visualization  of the glitch occur. The original program has 3 modes of pixel sorting and only does in one way (vertical (V) + horizontal (H)). I modified it so we can change de direction of the sorting. Since this was not made by me, the variable names are diferent (describled below):
 
+* boolean mode = 0|1|2 -> mode is the Pixel sorter method to be used. [0]: will select pixels by getFirstNotBlackX() and then the getNextBlackY(); [1]: sort by brightness. It getFirstBrightX() and then getNextDarkY(); [2]: sort by getFirstNotWhiteX() and then getNextWhiteY().
+Threshold values to determine how the pixel sorting starts and ends:
+* int blackValue = -16000000; //original -16000000
+* int brightnessValue = 60; //original 60
+* int whiteValue = -13000000; //original -13000000
+* int glitch = 0|1|2|3 -> Determines the direction of the glitch. [0]: 2x pass -> vertical (V) + horizontal (H); [1]: 2x pass -> horizontal (H) + vertical (V); [2]: 1x pass -> horizontal (H); [3]: 1x pass -> vertical (V). When there is 2x pass the glitch gets more intense.
+
+Sorted by mode 0, respectively glitch: H, H+V, V, V+H
+
+![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode0.jpg)
+
+Sorted by mode 1, respectively glitch: H, H+V, V, V+H
+
+![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode1.jpg)
+
+Sorted by mode 2, respectively glitch: H, H+V, V, V+H
+
+![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode2.jpg)
+
+
+#### Glitch by Noise directed pixel sorting by KrabCode
 /[ UNDER CONSTRUCTION /]
-
-
 
                       o    .   _     .
                         .     (_)         o
@@ -86,3 +105,6 @@ Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSor
                  --------(_/------(_<_/--\_)--------hjw
             Eeeek! Can't you see I'm trying to take a bath?
             Go glitch some images and jUST come after all pixels are done.
+\- \- \-
+
+\[ all code available under MIT License - feel free to use. \]
