@@ -9,9 +9,8 @@ int width = 0;
 int height = 0;
 
 
-
+//options
 int glitchLevel = 10; //[0, 1, 2, 3, ... ] intensity of the glitch sorting pass
-int glitch; // the maximum gap size allowed to sort created by the glitch level
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
 //select how to sort the pixels by hue or brightness (select on and comment the other)
 String sortPixelMethod = "hue";
@@ -24,7 +23,7 @@ int multiStep = 1000;
 
 //Create a queue stack to hold the exchanged pixel indexes & colours from the while loop dummy calls
 Queue<int[]> stackcalls = new LinkedList();
-
+int glitch; // the maximum gap size allowed to sort created by the glitch level
 String filename;
 //there is no file validation, so any non-img selected will crash the program
 void fileSelected(File selection) {
