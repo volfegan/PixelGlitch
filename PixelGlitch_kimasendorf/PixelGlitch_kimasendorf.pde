@@ -2,7 +2,7 @@
 
 //options
 //mode = sortPixelMethod-> 0: getFirstNotBlackX; 1: getFirstBrightX (brightness; 2: getFirstNotWhiteX
-int mode = 3; //any number above will be replace randomly by 0|1|2
+int mode = 3; //any number above 2 will be replace randomly by 0|1|2
 
 // threshold values to determine sorting start and end pixels
 int blackValue = -16000000; //original -16000000

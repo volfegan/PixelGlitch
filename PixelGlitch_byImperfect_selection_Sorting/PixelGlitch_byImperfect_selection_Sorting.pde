@@ -8,15 +8,15 @@ int width = 0;
 int height = 0;
 
 
-
-//select how to sort the pixels by hue or brightness
+//options
+//select how to sort the pixels by hue or brightness (select on and comment the other)
 String sortPixelMethod = "hue";
 //String sortPixelMethod = "brightness";
 
-
-
 //used to control speed of sorting process
 int multiStep = 200;
+
+
 
 String filename;
 //there is no file validation, so any non-img selected will crash the program

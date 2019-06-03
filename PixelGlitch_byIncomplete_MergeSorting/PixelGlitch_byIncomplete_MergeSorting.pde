@@ -8,21 +8,22 @@ int width = 0;
 int height = 0;
 
 
+
 int glitchLevel = 7; //1, 2, 3, ... control number of merge division
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
-//select how to sort the pixels by hue or brightness
+//select how to sort the pixels by hue or brightness (select on and comment the other)
 String sortPixelMethod = "hue";
 //String sortPixelMethod = "brightness";
-
 
 //used to control speed of sorting process
 int multiStep = 100000;
 long startTime = 0;
 
+
+
 //Create a queue stack to hold the quicksort indices to control the recursive calls
 Queue<int[]> stackcalls = new LinkedList();
 boolean started = false; //to mark if it started using stackcalls queue
-
 int startL, mid, stopR; // variables used for the iterative mergeSort
 int division = 1; // The size of the sub-arrays . Constantly changing from 1 to n/2 (arr[0...n-1])
 

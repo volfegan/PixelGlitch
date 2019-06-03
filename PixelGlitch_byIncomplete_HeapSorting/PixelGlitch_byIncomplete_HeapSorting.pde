@@ -4,16 +4,19 @@ int steps = 0;
 int width = 0;
 int height = 0;
 
+
+//options
 int glitchLevel = 10; //[0, 1, 2, 3, ... 10] intensity of the glitch sorting pass
 float glitch;
 boolean showBothIMGs = false; //to show both imgs side by side, only sorted img
-//select how to sort the pixels by hue or brightness
+//select how to sort the pixels by hue or brightness (select on and comment the other)
 String sortPixelMethod = "hue";
 //String sortPixelMethod = "brightness";
 
 //used to control speed of sorting process
 int multiStep = 2000;
 boolean started = false; //to mark if it started sorting
+
 
 String filename;
 //there is no file validation, so any non-img selected will crash the program
