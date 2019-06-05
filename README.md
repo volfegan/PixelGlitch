@@ -63,7 +63,7 @@ Sorted by Brightness:
 |                      :---:                       |
 
 #### Glitch by kimasendorf/ASDFPixelSort
-Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). This program is a bit famous, so I wanted to see how  the visualization process of the glitch occur. The original program has 3 modes of pixel sorting and only does in one way (vertical (V) + horizontal (H)). I modified it so we can change the direction of the sorting in any combination of (V) and (H) sorting. Since this was not made by me, the variable names are different (described below):
+Based on [kimasendorf/ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort). This program is a bit famous, so I wanted to see how  the visualization process of the glitch occur. The original program has 3 modes of pixel sorting and only does in one way (vertical (V) + horizontal (H)). I modified it so we can change the direction of the sorting in any combination of (V) and (H) sorting. This gives 12 ways of sorting differently. Since this was not made by me, the variable names are different (description below):
 
 * boolean mode = 0|1|2 -> mode is the Pixel sorter method to be used. [0]: will select pixels by getFirstNotBlackX() and then the getNextBlackY(); [1]: sort by brightness. It getFirstBrightX() and then getNextDarkY(); [2]: sort by getFirstNotWhiteX() and then getNextWhiteY().
 Threshold values to determine how the pixel sorting starts and ends:
