@@ -89,7 +89,19 @@ For a visual demonstration of this method, wacht this video:
 [![Visualization on how kimasendorf / ASDFPixelSort glitches some Colorful Stripes img [1296x864]](https://i.ytimg.com/vi/jv1fbsZix6c/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDu7StCNDOXmbhsquMM-J5BmbLezg)](https://www.youtube.com/watch?v=jv1fbsZix6c)
 
 
-#### Glitch by Noise directed pixel sorting by KrabCode
+#### Glitch by KrabCode Noise directed pixel sorting
+Based on [KrabCode Noise directed pixel sort](https://gist.github.com/KrabCode/6fe0048fb471b099563dac857b53aa32). Just a few modifications to show original image in the corner, when reseting the image will have a fade effect and able to select image from local machine.
+
+Sketch options can be controlled by keyboard keys:
+* 'k' -> save image at /capture/ folder
+* 'r' -> reset to original img
+* 'i' -> show smaller original image in the corner
+* 'p' -> pause animation
+
+![Glitch of an sunflower by KrabCode Noise directed pixel sorting](Noise_directed_pixelSort_Krab.jpg)
+
+
+#### Glitch by Dithering
 /[ UNDER CONSTRUCTION /]
 
                       o    .   _     .
