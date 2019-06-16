@@ -131,5 +131,6 @@ For more resources for glitch stuff try the following libraries:
 
 * https://github.com/tsulej/GenerateMe
 
+* https://github.com/KyleNeubarth/sketch_pixelsort_smear
 
 \[ all code available under MIT License - feel free to use. \]
