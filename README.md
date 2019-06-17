@@ -120,6 +120,8 @@ Sketch options can be controlled by keyboard keys:
             Go glitch some images and jUST come after all pixels are done.
 \- \- \-
 
+\[ all code available under MIT License - feel free to use. \]
+
 For more resources for glitch stuff try the following libraries:
 
 * https://github.com/jromeem/ddgk-gltch
@@ -130,4 +132,3 @@ For more resources for glitch stuff try the following libraries:
 
 * https://github.com/KyleNeubarth/sketch_pixelsort_smear
 
-\[ all code available under MIT License - feel free to use. \]
