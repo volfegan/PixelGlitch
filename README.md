@@ -101,9 +101,6 @@ Sketch options can be controlled by keyboard keys:
 ![Glitch of an sunflower by KrabCode Noise directed pixel sorting](Noise_directed_pixelSort_Krab.jpg)
 
 
-#### Glitch by Dithering
-/[ UNDER CONSTRUCTION /]
-
                       o    .   _     .
                         .     (_)         o
                  o      ____            _       o
