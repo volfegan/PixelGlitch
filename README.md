@@ -1,5 +1,5 @@
 # PixelGlitch
-Image glitch visualization using various Pixel Sorting methods for Processing. This is a by-product from [my pixel sorting library](https://github.com/volfegan/PixelSorting). I also included some external library sketches and all the credits and original source to their work is given in the source code and here.
+Image glitch visualization using various Pixel Sorting methods for Processing v3. This is a by-product from [my pixel sorting library](https://github.com/volfegan/PixelSorting). I also included some external library sketches and all the credits and original source to their work is given in the source code and here.
 
 \- \- \-
 
@@ -130,5 +130,6 @@ For more resources for glitch stuff try the following libraries:
 
 * https://github.com/tsulej/GenerateMe
 
-* https://github.com/KyleNeubarth/sketch_pixelsort_smear
+* https://github.com/KyleNeubarth/sketch_pixelsort_smear (it does not work with processing 3 as it dependents on outdated libraries)
 
+* https://github.com/nerrull/PixelMigration
