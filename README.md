@@ -23,7 +23,7 @@ Based on [Pixel Selection Sort](https://github.com/volfegan/PixelSorting/tree/ma
 
 Below two examples of an image glitched, with the pixels either sorted by hue or brightness:
 
-![Imperfect selection sorting of an sunflower](Imperfect_selection_Sorting.jpg)
+![Imperfect selection sorting of an sunflower](img_examples/Imperfect_selection_Sorting.jpg)
 
 #### Glitch by Incomplete HeapSorting
 Based on [Pixel Heap Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelHeapSorting). The glitchLevel range is [0, to..., 10]. The glitchLevel 0 to 9 are constructed by "heapify" the image array without doing the 1st "heapify" pass that creates the heap tree. The higher the level, more of the image is sorted, but in an incomplete form. The glitchLevel 10 is done by only doing the 1st "heapify" pass and not finishing the sorting, and that gives the tree-like appearance to image repeating itself.
