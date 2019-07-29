@@ -30,33 +30,33 @@ Based on [Pixel Heap Sorting](https://github.com/volfegan/PixelSorting/tree/mast
 
 Sorted by Hue:
 
-![Incomplete HeapSorting of an sunflower by hue](Incomplete_HeapSorting_hue.jpg)
+![Incomplete HeapSorting of an sunflower by hue](img_examples/Incomplete_HeapSorting_hue.jpg)
 
 Sorted by Brightness:
 
-![Incomplete HeapSorting of an sunflower by brightness](Incomplete_HeapSorting_brightness.jpg)
+![Incomplete HeapSorting of an sunflower by brightness](img_examples/img_examples/Incomplete_HeapSorting_brightness.jpg)
 
 #### Glitch by Incomplete Merge Sorting
 Based on [Pixel Merge Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelMergeSorting). No difference from a normal Merge sorting. The glitchLevel range is [1, to...] and is used to control how many division|merges are done during the sorting before stopping.
 
 Sorted by Hue:
 
-![Incomplete Merge Sorting of an sunflower by hue](Incomplete_MergeSorting_hue.jpg)
+![Incomplete Merge Sorting of an sunflower by hue](img_examples/Incomplete_MergeSorting_hue.jpg)
 
 Sorted by Brightness:
 
-![Incomplete Merge Sorting of an sunflower by brightness](Incomplete_MergeSorting_brightness.jpg)
+![Incomplete Merge Sorting of an sunflower by brightness](img_examples/Incomplete_MergeSorting_brightness.jpg)
 
 #### Glitch by Incomplete Shell Sorting
 Based on [Pixel Shell Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelShellSorting). No difference from a normal Shell sorting. The glitchLevel range is [0, to...] and is used to control the size of the max gap interval of the pixel sorting (using the variable glitch) and stopping when the gap reaches the limit given. How this Pixel Shell sorting cuts and reassemble the image depends on the image width x height and the colour hue|brightness. As a general rule, when the width is wider than the height we see the image is also being cut vertically and horizontally. For this square dimension flower, we can only see the cuts being done horizontally. 
 
 Sorted by Hue:
 
-![Incomplete Shell Sorting of an sunflower by hue](Incomplete_ShellSorting_hue.jpg)
+![Incomplete Shell Sorting of an sunflower by hue](img_examples/Incomplete_ShellSorting_hue.jpg)
 
 Sorted by Brightness:
 
-![Incomplete Shell Sorting of an sunflower by brightness](Incomplete_ShellSorting_brightness.jpg)
+![Incomplete Shell Sorting of an sunflower by brightness](img_examples/Incomplete_ShellSorting_brightness.jpg)
 
 
 | *3rd party imported and modified glitch library* |
@@ -74,15 +74,15 @@ Threshold values to determine how the pixel sorting starts and ends:
 
 Sorted by mode 0, respectively glitch: H, H+V, V, V+H
 
-![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode0.jpg)
+![Glitch of an sunflower by kimasendorf mode 0](img_examples/kimasendorf_mode0.jpg)
 
 Sorted by mode 1, respectively glitch: H, H+V, V, V+H
 
-![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode1.jpg)
+![Glitch of an sunflower by kimasendorf mode 0](img_examples/kimasendorf_mode1.jpg)
 
 Sorted by mode 2, respectively glitch: H, H+V, V, V+H. This glitch was very discreet in this image and only affected the dark areas below the flower.
 
-![Glitch of an sunflower by kimasendorf mode 0](kimasendorf_mode2.jpg)
+![Glitch of an sunflower by kimasendorf mode 0](img_examples/kimasendorf_mode2.jpg)
 
 For a visual demonstration of this method, wacht this video:
 
@@ -98,7 +98,7 @@ Sketch options can be controlled by keyboard keys:
 * 'i' -> show smaller original image in the corner
 * 'p' -> pause animation
 
-![Glitch of an sunflower by KrabCode Noise directed pixel sorting](Noise_directed_pixelSort_Krab.jpg)
+![Glitch of an sunflower by KrabCode Noise directed pixel sorting](img_examples/Noise_directed_pixelSort_Krab.jpg)
 
 
 #### Glitch by Dithering
