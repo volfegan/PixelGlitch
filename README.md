@@ -139,7 +139,7 @@ Sketch options can be controlled by keyboard keys:
 
 For a visual demonstration of this method, wacht this video:
 
-[![Visualization of KrabCode Voronoi filter on a colorful cat img [600x600]](https://i9.ytimg.com/vi_webp/wW7LvazCs9o/hqdefault.webp?sqp=CKj_-ekF&rs=AOn4CLCGujz-yIbh1M9hMeaq1N02B-Z3Hg)](https://www.youtube.com/watch?v=wW7LvazCs9o)
+[![Visualization of KrabCode Voronoi filter on a colorful cat img [600x600]](https://i.ytimg.com/vi/wW7LvazCs9o/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCVOcyav4oA4OSsCq0igpoyYYLu0w)](https://www.youtube.com/watch?v=wW7LvazCs9o)
 
                       o    .   _     .
                         .     (_)         o
