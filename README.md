@@ -34,7 +34,7 @@ Sorted by Hue:
 
 Sorted by Brightness:
 
-![Incomplete HeapSorting of an sunflower by brightness](img_examples/img_examples/Incomplete_HeapSorting_brightness.jpg)
+![Incomplete HeapSorting of an sunflower by brightness](img_examples/Incomplete_HeapSorting_brightness.jpg)
 
 #### Glitch by Incomplete Merge Sorting
 Based on [Pixel Merge Sorting](https://github.com/volfegan/PixelSorting/tree/master/PixelMergeSorting). No difference from a normal Merge sorting. The glitchLevel range is [1, to...] and is used to control how many division|merges are done during the sorting before stopping.
@@ -95,11 +95,51 @@ Based on [KrabCode Noise directed pixel sort](https://gist.github.com/KrabCode/6
 Sketch options can be controlled by keyboard keys:
 * 'k' -> save image at /capture/ folder
 * 'r' -> reset to original img
-* 'i' -> show smaller original image in the corner
+* 'i' -> show smaller original image in the corner as a thumbnail
 * 'p' -> pause animation
 
 ![Glitch of an sunflower by KrabCode Noise directed pixel sorting](img_examples/Noise_directed_pixelSort_Krab.jpg)
 
+For a visual demonstration of this method, wacht this video:
+
+[![Let's melt this colorful cat img [900x853] using KrabCode Noise directed pixel sorting](https://i.ytimg.com/vi/2eW6P7-Z8BI/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAM8anBe_Qqq6RfH5lqMt0JO93goA)](https://www.youtube.com/watch?v=jv1fbsZix6c)
+
+#### Glitch by KrabCode Voronoi filter
+Based on [KrabCode Voronoi filter](https://gist.github.com/KrabCode/d7f2c6c938e1acd2320062a3f842d3f7). This program gets the average colour bellow each Voronoi cell and colour it. But because of the so many checks, for an image of 600x600 pixels, it was getting a maximum of 1 frame/s. So, I added a quadtree system to find the Voronoi points faster and also tweaked the checking of pixels so only half the checks are necessary; this double the animation speed but that makes the Voronoi cell pixelated. No it can reach 15 frames/s for 500 Voronoi cells. Even with 1000 Voronoi cells I can get 12 frames/s with the right divider number (controls the scan area of the QuadTree). Before the quadtree and the less checking hacking, for 500 Voronoi points and 600x600 size, on every frame it was doing 180,000,000 checks and now with the implematetions and the optimum divisor for the QuadTree scan, it is doing around 700,000 checks. This is the effect:
+
+![Glitch of an sunflower by KrabCode Voronoi filter](img_examples/VoronoiFilter_Krab.jpg)
+
+I used the [Coding train QuadTree template](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_098.1_QuadTree/Processing), but I found a bug on it. This quadtree seems to only work properly if the canvas screen is a square (width = height). If the width and height are different, the Quadtree sectors start to not align properly and miss the created points. See [this example](https://twitter.com/VolfeganGeist/status/1155573757236469762) I posted on twitter where I created 100.000 points and queried the quadtree for the entire screen. The one with width=500 and height=400 you can clearly see in the mouse hover it cannot found any point on those areas between the quadtree sectors. Those space are also proportional to the diference between the width and height. Even the square size canvas, it can only find around 2/3 of the points.
+
+No idea how to fix this bug, but if I was smart enough to do that, this would probably improve the animation speed even more. But for the purpose of this sketch, it can run like this because if no voronoi point is found it scan all the points not using the quadtree system. So I guess for images that are not formated squared, this filter will perform very bad in comparison with a image with same size, but with square format.
+
+The performance increase with the quadtree is gain because we only need to scan for a point in a small section of the image. I used a variable 'div' to divide the screen by that number and search the point at that location. It is important to notice that with the scan area is too small it might find no points in the area (and will start checking the entire image) and if it is too big, will need to check too many points unnecessarily. This makes the frame rate has a maximum optimum value with a single 'div' value that depends on the image screen size, number of Voronoi points and their distribution.
+The main variable names are as follow:
+
+* boolean lessChecking = true; //increase speed animation by checking only half the pixel, but pixelates
+* boolean useQuadtree = true;
+* boolean showQuadtree = false; //show Quadtree structure and mouse hover can scan the voronoi points (useQuadtree MUST be true to show Quadtree)
+* boolean showBothIMGs = true; //to show both sources or only sorted source. Press 'i' for on|off
+* int div = 15; // Divides the screen in a small rectangle to search points using Quadtree
+* boolean showFrameRate = true;
+* boolean showOriginalsource = true; //allows to show original image for 2s at the start of animation
+* int pointCount = 500; //original 500 //How many points to create the Voronoi stuff
+* private int framesToCapture = 300; // to make gifs
+
+Sketch options can be controlled by keyboard keys:
+* 'k' -> save image at /capture/ folder
+* 'i' -> show smaller original image in the corner as a thumbnail
+* 'p' -> pause animation
+* '+' -> increase size of divisor 'div' (makes the scan area smaller)
+* '-' -> decrease size of divisor 'div' (makes the scan area bigger)
+* 'c' -> Enable/Disable less checking on pixels to find Voronoi points
+* 's' -> show Quadtree structure and the mouse hover have a scan area to find Voronoi points
+* 'q' -> Enable/Disable the use of Quadtree system
+* 'f' -> show the frame rate in the upper part
+
+For a visual demonstration of this method, wacht this video:
+
+[![Visualization of KrabCode Voronoi filter on a colorful cat img [600x600]](https://i9.ytimg.com/vi_webp/wW7LvazCs9o/hqdefault.webp?sqp=CKj_-ekF&rs=AOn4CLCGujz-yIbh1M9hMeaq1N02B-Z3Hg)](https://www.youtube.com/watch?v=wW7LvazCs9o)
 
                       o    .   _     .
                         .     (_)         o
