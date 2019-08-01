@@ -118,11 +118,10 @@ void interrupt() {
 }
 
 public void settings() {
-  //selectInput("Select an image file to process:", "fileSelected");
-  //interrupt(); //interrupt process until source is selected
+  selectInput("Select an image file to process:", "fileSelected");
+  interrupt(); //interrupt process until source is selected
 
   //for testing
-  source = loadImage("h_i_p_p_i_e_p_i_p_p_a_by_anark8-600x600.jpg");
   //source = loadImage("sunflower400.jpg");
   //source = loadImage("https://picsum.photos/600/600.jpg");
   width = source.width;
