@@ -2,9 +2,10 @@
 //https://gist.github.com/KrabCode/d7f2c6c938e1acd2320062a3f842d3f7
 
 import java.util.UUID;
+import java.util.TreeSet;
 
 //Options
-boolean lessChecking = true; //increase speed animation by checking only half the pixel, but pixelates
+boolean lessChecking = false; //increase speed animation by checking only half the pixel, but pixelates
 boolean useQuadtree = true;
 boolean showQuadtree = false; //show Quadtree structure and mouse hover can scan the voronoi points 
 //useQuadtree MUST be true to show Quadtree 
@@ -16,8 +17,8 @@ int div = 15; // Divides the screen in a small rectangle to search points using 
 boolean showFrameRate = true;
 boolean showOriginalsource = true; //allows to show original image for 2s at the start of animation
 //How many points to create Voronoi stuff
-int pointCount = 500; //original 500
-private int framesToCapture = 300; // to make gifs
+int pointCount = 500; //original = 500 (number of voronoi cells)
+private int framesToCapture = 1; // to make gifs, original = 300
 
 
 Quadtree qtree;
@@ -126,7 +127,6 @@ public void settings() {
   //source = loadImage("https://picsum.photos/600/600.jpg");
   width = source.width;
   height = source.height;
-
   //the canvas window size will be according to the source size
   //if the source is bigger, it will be resized to 80% of display
   if (width > displayWidth) {
@@ -203,7 +203,7 @@ public void draw() {
     double rangeWidth = width/div;
     double rangeHeight = height/div;
     Rectangle range = new Rectangle (mouseX, mouseY, rangeWidth, rangeHeight);
-    ArrayList<Point> points = qtree.query(range);
+    TreeSet<Point> points = qtree.query(range);
 
     rectMode(CENTER);
     rect((float)range.x, (float) range.y, (float) range.width * 2, (float)range.height * 2);
@@ -236,8 +236,7 @@ public P findNearestPoint(int x, int y) {
     double rangeWidth = width/div;
     double rangeHeight = height/div;
     Rectangle range = new Rectangle ((double)x, (double)y, rangeWidth, rangeHeight);
-    ArrayList<Point> points = new ArrayList <Point>();
-    points = qtree.query(range);
+    TreeSet<Point> points = qtree.query(range);
 
     for (Point point : points) {
       P p = point.getData();
@@ -272,7 +271,7 @@ private void voronoiFilter() {
       nearest.myPixels.add(new PVector(x, y));
 
       if (lessChecking) {
-        //To double the animation rate, the x and y loop to increase x+=2 and y+=2
+        //To increase the animation rate, the x and y loop to increase x+=2 and y+=2
         //But that will make the structure pixelated
         if (x>1 && y>1) {
           nearest.myPixels.add(new PVector(x-1, y));
