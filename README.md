@@ -140,7 +140,7 @@ For a visual demonstration of this method, wacht this video:
 
 #### Glitch by Low Budget Reaction-Diffusion System
 
-Something fun I saw in the internet ![reaction-diffusion system using photoshop filters](https://twitter.com/VolfeganGeist/status/1275899902237818884). I don't even know what a reaction diffusion system is (you don't need to point that for me, I'm searching the term now! [Reaction–diffusion system](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system)) WTF! That is complicated, but it is possible to create a reaction diffusion system just by using these image filters:
+Something fun I saw in the internet [reaction-diffusion system using photoshop filters](https://twitter.com/VolfeganGeist/status/1275899902237818884). I don't even know what a reaction diffusion system is (you don't need to point that for me, I'm searching the term now! [Reaction–diffusion system](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system)) WTF! That is complicated, but it is possible to create a reaction diffusion system just by using these image filters:
 1.High Pass (sharpening) 2.Threshold 3.Low Pass (Blur).
 Inside the program there are the general purpose functions for those filters to anyone who needs them for some custom pixel manipulation.
 
