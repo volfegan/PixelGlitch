@@ -109,7 +109,7 @@ Based on [KrabCode Voronoi filter](https://gist.github.com/KrabCode/d7f2c6c938e1
 
 ![Glitch of an sunflower by KrabCode Voronoi filter](img_examples/VoronoiFilter_Krab.jpg)
 
-I used the [Coding train QuadTree template](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_098.3_QuadTree_Collisions/Processing). The performance increase with the quadtree is gain because we only need to scan for a point in a small section of the image. I used a variable 'div' to divide the screen by that number and search the point at that location. It is important to notice that if the scan area is too small it might find no points in the area (and will start checking the entire image) and if it is too big, will need to check too many points unnecessarily. This makes the frame rate having a maximum optimum value with a single 'div' value that depends on the image screen size, number of Voronoi points and their distribution. I could write a opmimazer function that search dinamically for the best 'div' value, but let's not go crazy for a simple sketch.
+I used the [Coding train QuadTree template](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_098.3_QuadTree_Collisions/Processing). The performance increase with the quadtree is gain because we only need to scan for a point in a small section of the image. I used a variable 'div' to divide the screen by that number and search the point at that location. It is important to notice that if the scan area is too small it might find no points in the area (and will start checking the entire image) and if it is too big, will need to check too many points unnecessarily. This makes the frame rate having a maximum optimum value with a single 'div' value that depends on the image screen size, number of Voronoi points and their distribution. I could write a opmimazer function that search dinamically for the best 'div' value, but let's not go crazy for a simple sketch, I'm lazy.
 The main variable names are as follow:
 
 * boolean lessChecking = true; //increase speed animation by checking only half the pixel, but pixelates
@@ -136,6 +136,29 @@ Sketch options can be controlled by keyboard keys:
 For a visual demonstration of this method, wacht this video:
 
 [![Visualization of KrabCode Voronoi filter on a colorful cat img [600x600]](https://i.ytimg.com/vi/wW7LvazCs9o/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCVOcyav4oA4OSsCq0igpoyYYLu0w)](https://www.youtube.com/watch?v=wW7LvazCs9o)
+
+
+#### Glitch by Low Budget Reaction Diffusion System
+
+Something fun I saw in the internet (link to upload). I don't even know what a reaction diffusion system is (you don't need to point that for me, I'm searching the term now! [Reaction–diffusion system](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system)) WTF! That is complicated to create, but it is possible to create a reaction diffusion system just using image filters:
+1.High Pass (sharpening) 2.Threshold 3.Low Pass (Blur).
+Inside the program there are the general purpose functions of those filters to anyone who needs them for some custom pixel manipulation.
+
+The process can be used in any image, but it will transform it into a black & white image. I'm just putting here because it can 'glitch' images in a very disturbing way (they will become Turing pattern). The process is slow and it can get stop for a long period, so just use the '+' to increase the speed; it will create some pixel artifacts that will make the final result different than from the normal speed. This is the effect:
+
+![Glitch of some lines and blobs by Low Budget Reaction Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system.jpg)
+
+Sketch options can be controlled by keyboard keys:
+* 'i' -> show smaller original image in the corner as a thumbnail
+* 'p' -> pause animation
+* 's' -> save image at root of sketch folder
+* 't' -> show the title (Reaction Diffusion System by: 1.High Pass 2.Threshold 3.Blur) and frame rate
+* '+' -> increase the speed of the diffusion reaction effect, but it creates pixel artifacts
+* '-' -> decrease the speed of the process
+
+For a visual demonstration of this method, wacht this video:
+
+(link to upload)
 
                       o    .   _     .
                         .     (_)         o
