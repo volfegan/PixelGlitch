@@ -72,7 +72,7 @@ void settings() {
   interrupt(); //interrupt process until img is selected
 
   //for testing
-  img = loadImage("test.jpg");
+  //img = loadImage("test.jpg");
   width = img.width;
   height = img.height;
 
