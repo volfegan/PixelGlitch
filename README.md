@@ -1,5 +1,5 @@
 # PixelGlitch
-Image glitch visualization using various Pixel Sorting methods for Processing v3. This is a by-product from [my pixel sorting library](https://github.com/volfegan/PixelSorting). I also included some external library sketches and all the credits and original source to their work is given in the source code and here.
+Image glitch visualization using various Pixel Sorting methods for Processing v3. This is a by-product from [my pixel sorting library](https://github.com/volfegan/PixelSorting) and some other stuff I come by. I also included some external library sketches and all the credits and original source to their work is given here.
 
 \- \- \-
 
@@ -147,6 +147,10 @@ Inside the program there are the general purpose functions of those filters to a
 The process can be used in any image, but it will transform it into a black & white image. I'm just putting here because it can 'glitch' images in a very disturbing way (they will become Turing pattern). The process is slow and it can get stop for a long period, so just use the '+' to increase the speed; it will create some pixel artifacts that will make the final result different than from the normal speed. This is the effect:
 
 ![Glitch of some lines and blobs by Low Budget Reaction Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system.jpg)
+
+This is some examples of the various degrees of the process on this cat:
+
+![Glitch of a cat by Low Budget Reaction Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system2.jpg)
 
 Sketch options can be controlled by keyboard keys:
 * 'i' -> show smaller original image in the corner as a thumbnail
