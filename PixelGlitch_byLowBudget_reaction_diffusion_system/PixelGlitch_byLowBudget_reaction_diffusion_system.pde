@@ -8,7 +8,6 @@ import java.util.UUID;
 
 PImage img;
 PImage sortedPixels; //image processed
-int index = 0;
 int width = 0;
 int height = 0;
 int step = 0;
@@ -124,7 +123,7 @@ void draw() {
 
       //2.Threshold
       if (step >= 2 && step < 4) {
-        sortedPixels = thresholdFilter(sortedPixels, .57);
+        sortedPixels = thresholdFilter(sortedPixels, random(.48,.59));
         //sortedPixels = thresholdFilter(sortedPixels, .9);
       }
 
@@ -168,10 +167,10 @@ void draw() {
     if (showTitleTxt) {
       fill(0, 120);
       rectMode(CORNERS);
-      rect(5, 10, 650, 35);
+      rect(5, 10, 670, 35);
       fill(-1);
       text("Reaction Diffusion System by: 1.High Pass 2.Threshold 3.Blur _>"+
-        String.format("%.2f", frameRate) + " frameRate", 10, 30);
+        String.format("%.2f", frameRate) + " frameRate", 20, 30);
     }
   } else {
     //save the image with a random id
