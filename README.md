@@ -138,7 +138,7 @@ For a visual demonstration of this method, wacht this video:
 [![Visualization of KrabCode Voronoi filter on a colorful cat img [600x600]](https://i.ytimg.com/vi/wW7LvazCs9o/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCVOcyav4oA4OSsCq0igpoyYYLu0w)](https://www.youtube.com/watch?v=wW7LvazCs9o)
 
 
-#### Glitch by Low Budget Reaction Diffusion System
+#### Glitch by Low Budget Reaction-Diffusion System
 
 Something fun I saw in the internet (link to upload). I don't even know what a reaction diffusion system is (you don't need to point that for me, I'm searching the term now! [Reaction–diffusion system](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system)) WTF! That is complicated, but it is possible to create a reaction diffusion system just by using these image filters:
 1.High Pass (sharpening) 2.Threshold 3.Low Pass (Blur).
@@ -146,11 +146,11 @@ Inside the program there are the general purpose functions for those filters to 
 
 The process can be used in any image, but it will transform it into a black & white image. I'm just putting here because it can 'glitch' images in a very disturbing Turing patterns. The process is slow and it can get stuck for a long period, so just use the '+' to increase the speed; it will create some pixel artifacts that will make the final result different than from the normal speed. This is the effect:
 
-![Glitch of some lines and blobs by Low Budget Reaction Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system.jpg)
+![Glitch of some lines and blobs by Low Budget Reaction-Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system.jpg)
 
 This is some examples of the various degrees of the process on this cat:
 
-![Glitch of a cat by Low Budget Reaction Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system2.jpg)
+![Glitch of a cat by Low Budget Reaction-Diffusion System](img_examples/PixelGlitch_byLowBudget_reaction_diffusion_system2.jpg)
 
 Sketch options can be controlled by keyboard keys:
 * 'i' -> show smaller original image in the corner as a thumbnail
