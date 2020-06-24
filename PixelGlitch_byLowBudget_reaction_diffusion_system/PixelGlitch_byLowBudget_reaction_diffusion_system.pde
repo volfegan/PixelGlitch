@@ -17,7 +17,7 @@ boolean showBothIMGs = false; //show both  the original image and processed
 boolean showTitleTxt = true;
 boolean saveImg = false;
 boolean pause = true;
-boolean showOriginalImage = true;
+boolean showOriginalImageAtStart = true;
 
 //used to control speed of the process
 int multiStep = 1; //use: '+' or '-' to control the speed
@@ -108,10 +108,10 @@ void draw() {
   step++;
   step %= 6;
 
-  if (millis() > time + 2000 && showOriginalImage) {
+  if (millis() > time + 2000 && showOriginalImageAtStart) {
     //show the orginal image for  2s
     pause = false;
-    showOriginalImage = false;
+    showOriginalImageAtStart = false;
   }
 
   if (!pause) {
