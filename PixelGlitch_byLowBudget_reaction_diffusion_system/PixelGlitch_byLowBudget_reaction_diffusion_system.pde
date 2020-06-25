@@ -248,7 +248,8 @@ public PImage highPassFilter(PImage image) {
 //return a blur PImage
 public PImage lowPassFilter(PImage image) {
   //low-pass matrix
-  float v = 1.0 / 9.0;
+  //float v = 1.0 / 9; //original blur value
+  float v = 1.0 / random(9.0,9.21); //for better diffusion
   float[][] kernel = {
     {v, v, v}, 
     {v, v, v}, 
