@@ -12,7 +12,8 @@ int width = 0;
 int height = 0;
 int step = 0;
 float time=0;
-boolean showBothIMGs = false; //show both  the original image and processed
+boolean showBothIMGs = false; //show both the original image as a thumbnail
+boolean overlayBothIMGs = false; //show both the original image overlay in the processed image
 boolean showTitleTxt = true;
 boolean saveImg = false;
 boolean pause = true;
@@ -23,8 +24,20 @@ int multiStep = 1; //use: '+' or '-' to control the speed
 
 public void keyPressed() {
   if (key == 'i') {
-    if (showBothIMGs) showBothIMGs = false; //show the original image in the corner
-    else showBothIMGs = true;
+    if (showBothIMGs) {
+      showBothIMGs = false; //show the original image in the corner
+    } else {
+      showBothIMGs = true;
+      overlayBothIMGs = false;
+    }
+  }
+  if (key == 'o') {
+    if (overlayBothIMGs) {
+      overlayBothIMGs = false; //show both the original image overlay in the processed image
+    } else {
+      overlayBothIMGs = true;
+      showBothIMGs = false;
+    }
   }
   if (key == 'p') {
     if (pause == false) pause=true;
@@ -123,7 +136,7 @@ void draw() {
 
       //2.Threshold
       if (step >= 2 && step < 4) {
-        sortedPixels = thresholdFilter(sortedPixels, random(.48,.59));
+        sortedPixels = thresholdFilter(sortedPixels, random(.48, .59));
         //sortedPixels = thresholdFilter(sortedPixels, .9);
       }
 
@@ -152,6 +165,14 @@ void draw() {
     if (saveImg == false) {
       tint(255, 190);  // Apply transparency without changing color
       image(img, 0, 0.8* img.height, 0.2* img.width, 0.2* img.height);
+      noTint();
+    }
+  } else if(overlayBothIMGs) {
+    image(sortedPixels, 0, 0);
+    //overlay the original img into the processed image
+    if (saveImg == false) {
+      tint(255, 120);  // Apply transparency without changing color
+      image(img, 0, 0);
       noTint();
     }
   } else {
@@ -249,7 +270,7 @@ public PImage highPassFilter(PImage image) {
 public PImage lowPassFilter(PImage image) {
   //low-pass matrix
   //float v = 1.0 / 9; //original blur value
-  float v = 1.0 / random(9.0,9.21); //for better diffusion
+  float v = 1.0 / random(9.0, 9.21); //for better diffusion
   float[][] kernel = {
     {v, v, v}, 
     {v, v, v}, 
