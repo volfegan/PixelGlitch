@@ -154,6 +154,7 @@ This is some examples of the various degrees of the process on this cat:
 
 Sketch options can be controlled by keyboard keys:
 * 'i' -> show smaller original image in the corner as a thumbnail
+* 'o' -> overlay the original image into the processed image
 * 'p' -> pause animation
 * 's' -> save image at root of sketch folder
 * 't' -> show the title (Reaction Diffusion System by: 1.High Pass 2.Threshold 3.Blur) and frame rate
