@@ -13,7 +13,7 @@ int height = 0;
 int step = 0;
 float time=0;
 boolean showBothIMGs = false; //show both the original image as a thumbnail
-boolean overlayBothIMGs = false; //show both the original image overlay in the processed image
+boolean overlayBothIMGs = false; //overlay the original image into the processed image
 boolean showTitleTxt = true;
 boolean saveImg = false;
 boolean pause = true;
@@ -33,7 +33,7 @@ public void keyPressed() {
   }
   if (key == 'o') {
     if (overlayBothIMGs) {
-      overlayBothIMGs = false; //show both the original image overlay in the processed image
+      overlayBothIMGs = false; //overlay the original image into the processed image
     } else {
       overlayBothIMGs = true;
       showBothIMGs = false;
