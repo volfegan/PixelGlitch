@@ -155,6 +155,7 @@ Sketch options can be controlled by keyboard keys:
 * 'i' -> show smaller original image in the corner as a thumbnail
 * 'o' -> overlay the original image into the processed image
 * 'p' -> pause animation
+* 'r' -> reset the processed image to its original form
 * 's' -> save image at root of sketch folder
 * 't' -> show the title (Reaction Diffusion System by: 1.High Pass 2.Threshold 3.Blur) and frame rate
 * '+' -> increase the speed of the diffusion reaction effect, but it creates pixel artifacts
