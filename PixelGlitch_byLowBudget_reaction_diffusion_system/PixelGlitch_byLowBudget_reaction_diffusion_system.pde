@@ -17,6 +17,7 @@ boolean overlayBothIMGs = false; //overlay the original image into the processed
 boolean showTitleTxt = true;
 boolean saveImg = false;
 boolean pause = true;
+boolean resetImage = false; //image processed is reset to original image
 boolean showOriginalImageAtStart = true;
 
 //used to control speed of the process
@@ -42,6 +43,9 @@ public void keyPressed() {
   if (key == 'p') {
     if (pause == false) pause=true;
     else pause = false;
+  }
+  if (key == 'r') {
+    resetImage=true; //image processed is reset to original image
   }
   if (key == 's') {
     saveImg = true; //snapshot of the image
@@ -120,6 +124,12 @@ void draw() {
   step++;
   step %= 6;
 
+  //image processed is reset to original image
+  if (resetImage) {
+    sortedPixels = img.get();
+    resetImage = false;
+  }
+
   if (millis() > time + 2000 && showOriginalImageAtStart) {
     //show the orginal image for  2s
     pause = false;
@@ -167,7 +177,7 @@ void draw() {
       image(img, 0, 0.8* img.height, 0.2* img.width, 0.2* img.height);
       noTint();
     }
-  } else if(overlayBothIMGs) {
+  } else if (overlayBothIMGs) {
     image(sortedPixels, 0, 0);
     //overlay the original img into the processed image
     if (saveImg == false) {
