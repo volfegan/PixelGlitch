@@ -188,6 +188,12 @@ For a visual demonstration of this method, wacht this video:
 
 For more resources for glitch stuff try the following libraries:
 
+* [probabilistic_dithering_noiseImage.pde](https://gist.github.com/volfegan/6b27e612da880b6e83f61965479dd9d5) Bad TV image reception: Black & White and Colour version
+
+* [Sinkhole_Image_Inward_Flow.pde](https://gist.github.com/volfegan/36de7415d4c862ba82b67f936ac04cf8) Reflect an image into the 4 sides and flow it inward like a sinkhole
+
+* [ImageDigitalQuantumWarp.pde](https://gist.github.com/volfegan/56abfcdda38fc97f0471cf0d1dbcb68b) Glitch effect for images warping from one side of the screen to another
+
 * https://github.com/jromeem/ddgk-gltch
 
 * https://github.com/jeffThompson/PixelSorting
